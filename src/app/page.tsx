@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
-import Link from "next/link";
 import { CANDIDATES, POLL } from "@/data/poll";
 
 const VOTER_KEY = "spj_voter_id";
@@ -232,13 +231,12 @@ export default function VotePage() {
             >
               Vymazat
             </button>
-            <Link
-              href="/vysledky"
-              className="rounded-lg border border-primary px-6 py-3 font-semibold text-primary transition hover:bg-surface"
-            >
-              Zobrazit výsledky
-            </Link>
           </div>
+
+          <p className="mt-6 text-center text-xs text-gray-400">
+            Průběžné výsledky se během hlasování nezobrazují, aby nikoho
+            neovlivnily.
+          </p>
         </>
       )}
     </main>
